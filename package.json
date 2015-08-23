@@ -10,7 +10,7 @@
   },
   "repository": {
     "type": "git",
-    "url": "https://github.com/bakacak/web.git"
+    "url": "git@github.com:bakacak/web.git"
   },
   "author": "İsmail Demirbilek",
   "license": "ISC",

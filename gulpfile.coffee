@@ -111,7 +111,7 @@ gulp.task 'deploy', ['build'], ->
   # Add travis secure to remote url
   options =
     remoteUrl: pkg.repository.url
-    #remoteUrl: "#{remoteUrl.protocol}//#{process.env.GH_TOKEN}@#{remoteUrl.host}#{remoteUrl.pathname}"
+
   gulp.src './public/**/*'
     .pipe ghPages(options)
 
