@@ -1,4 +1,5 @@
 # Source: https://github.com/leonidas/gulp-project-template
+pkg          = require './package.json'
 browserify   = require 'browserify'
 browserSync  = require 'browser-sync'
 chalk        = require 'chalk'
@@ -18,6 +19,8 @@ streamify    = require 'gulp-streamify'
 stylus       = require 'gulp-stylus'
 uglify       = require 'gulp-uglify'
 watchify     = require 'watchify'
+ghPages      = require 'gulp-gh-pages'
+url          = require 'url'
 
 production   = process.env.NODE_ENV is 'production'
 
@@ -36,8 +39,8 @@ config =
     watch: './src/styles/*.styl'
     destination: './public/css/'
   assets:
-    source: './src/assets/**/*.*'
-    watch: './src/assets/**/*.*'
+    source: './src/assets/**/*'
+    watch: './src/assets/**/*'
     destination: './public/'
 
 handleError = (err) ->
@@ -102,6 +105,15 @@ gulp.task 'server', ->
     port:      9001
     server:
       baseDir: './public'
+
+gulp.task 'deploy', ['build'], ->
+  remoteUrl = url.parse pkg.repository.url
+  # Add travis secure to remote url
+  options =
+    remoteUrl: pkg.repository.url
+    #remoteUrl: "#{remoteUrl.protocol}//#{process.env.GH_TOKEN}@#{remoteUrl.host}#{remoteUrl.pathname}"
+  gulp.src './public/**/*'
+    .pipe ghPages(options)
 
 gulp.task 'watch', ->
   gulp.watch config.templates.watch, interval: 500, ['templates']

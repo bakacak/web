@@ -10,7 +10,7 @@
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/bakacak/web.git"
+    "url": "https://github.com/bakacak/web.git"
   },
   "author": "İsmail Demirbilek",
   "license": "ISC",
@@ -36,6 +36,7 @@
     "gulp-autoprefixer": "1.0.1",
     "gulp-bower": "0.0.10",
     "gulp-filter": "^2.0.2",
+    "gulp-gh-pages": "^0.5.2",
     "gulp-jade": "~0.9.0",
     "gulp-minify-css": "~0.3.5",
     "gulp-sourcemaps": "^1.3.0",
