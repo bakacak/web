@@ -7562,6 +7562,7 @@ md-tooltip {
   #header img.profile {
     top: 75px;
     width: 100px;
+    margin-left: -50px;
   }
 }
 #main-content {
