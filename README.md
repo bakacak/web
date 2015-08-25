@@ -1,5 +1,10 @@
-# web
-web app for bakacak.tk
+Web app for [fatihbakacak.tk](http://fatihbakacak.tk). Runs on gh-pages, built on following tech.
+
+- CoffeeScript
+- Browserify
+- AngularJS
+- Angular Material
+- Gulp
 
 #Prequisites
 - [NodeJS & npm](https://www.digitalocean.com/community/tutorials/how-to-install-node-js-with-nvm-node-version-manager-on-a-vps).
