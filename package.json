@@ -31,7 +31,6 @@
     "coffeeify": "~0.7.0",
     "deamdify": "^0.1.1",
     "ecstatic": "~0.5.3",
-    "equals": "^1.0.0",
     "gulp": "~3.8.1",
     "gulp-autoprefixer": "1.0.1",
     "gulp-bower": "0.0.10",
@@ -50,8 +49,6 @@
     "karma-cli": "0.0.4",
     "karma-coffee-preprocessor": "~0.2.1",
     "karma-jasmine": "~0.2.2",
-    "point-in-polygon": "^1.0.0",
-    "pretty-hrtime": "~0.2.2",
     "vinyl-source-stream": "~1.0.0",
     "watchify": "~2.3.0"
   },
